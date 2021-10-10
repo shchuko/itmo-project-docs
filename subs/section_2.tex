@@ -1,0 +1,141 @@
+%! Author = vladislav.yaroshchuk
+%! Date = 10/10/2021
+
+\pagebreak
+
+
+\section{Выделение ключевых понятий этапа жизненного цикла ПО из стандартов.}
+
+Каждый из стандартов описывает свою область применения в рамках терминов и понятий.
+После анализа выбранных стандартов были выделены следующие основные и дополнительные понятия.
+
+
+Основные понятия:
+\begin{enumerate}
+    \item Сопровождение (maintenance)
+    \begin{enumerate}
+        \item модификации программного продукта в части его кода и документации
+        для решения возникающих проблем при эксплуатации или реализации потребностей в
+        улучшениях тех или иных характеристик.
+        (ГОСТ Р ИСО/МЭК 12207-2010)
+        \item modification of existing software while preserving its integrity.
+        (SWEBOK v3)
+    \end{enumerate}
+
+    \item Сопровождаемость (Maintainability)
+    \begin{enumerate}
+        \item Набор атрибутов, относящихся к объему работ, требуемых для проведения конкретных изменений (модификаций).
+        (ГОСТ Р ИСО/МЭК 9126--93)
+        \item the capability of the software product to be modified.
+        Modifications may include corrections, improvements or adaptation of the software to changes in environment, and in requirements and functional specifications
+        (ISO/IEC 14764:2006)
+    \end{enumerate}
+
+    \item Процесс сопровождения (maintenance process):
+    \begin{enumerate}
+        \item Работы (виды деятельности) и задачи (задания), выполняемые организацией, осуществляющей сопровождение (персоналом сопровождения, сопроводителем).
+        (ГОСТ Р ИСО/МЭК 14764--2002)
+        \item the totality of activities required to provide cost-effective support to a software system.
+        Activities are performed during the pre-delivery stage as well as the post-delivery stage
+        (ISO/IEC 14764:2006)
+    \end{enumerate}
+\end{enumerate}
+
+
+Дополнительные понятия:
+\begin{enumerate}
+    \item Адаптивное сопровождение (adaptive maintenance)
+    \begin{enumerate}
+        \item Изменение (модификация) программного продукта после поставки, обеспечивающее его работоспособность в измененных или изменяющихся условиях (среде).
+        (ГОСТ Р ИСО/МЭК 14764--2002)
+        \item the modification of a software product, performed after delivery, to keep a software product usable in a changed or changing environment
+        (ISO/IEC 14764:2006)
+    \end{enumerate}
+
+    \item Корректирующее сопровождение (corrective maintenance):
+    \begin{enumerate}
+        \item Реактивное изменение программного продукта, выполняемое после его поставки для корректировки обнаруженных проблем (несоответствий, ошибок).
+        (ГОСТ Р ИСО/МЭК 14764--2002)
+        \item the reactive modification of a software product performed after delivery to correct discovered problems
+        (ISO/IEC 14764:2006)
+    \end{enumerate}
+
+    \item Полное сопровождение (perfective maintenance)
+    \begin{enumerate}
+        \item Модификация программного продукта после поставки для повышения его рабочих характеристик или улучшения сопровождаемости.
+        (ГОСТ Р ИСО/МЭК 14764--2002)
+        \item the modification of a software product after delivery to detect and correct latent faults in the software product before they are manifested as failures
+        (ISO/IEC 14764:2006)
+    \end{enumerate}
+
+    \item Профилактическое сопровождение (preventive maintenance)
+    \begin{enumerate}
+        \item Модификация программного продукта после поставки в целях обнаружения и корректировки имеющихся в нем скрытых ошибок для предотвращения явного проявления этих ошибок при эксплуатации данного продукта.
+        (ГОСТ Р ИСО/МЭК 14764--2002)
+        \item the modification of a software product after delivery to detect and correct latent faults in the software product before they become operational faults
+        (ISO/IEC 14764:2006)
+    \end{enumerate}
+
+    \item Отчет о проблеме (ОП) (problem report [PR])
+    \begin{enumerate}
+        \item Термин, используемый для определения и описания проблем, обнаруженных в программном продукте.
+        (ГОСТ Р ИСО/МЭК 14764--2002)
+        \item a term used to identify and describe problems detected in a software product
+        (ISO/IEC 14764:2006)
+    \end{enumerate}
+
+    \item Предложение о модификации (ПР)
+    \begin{enumerate}
+        \item Общий термин, используемый для определения предполагаемых изменений в сопровождаемом программном продукте.
+        Может быть далее классифицировано как коррекция (correction) или модернизация (enhancement)
+        (ГОСТ Р ИСО/МЭК 14764--2002)
+        \item a generic term used to identify proposed modifications to a software product that is being maintained
+        (ISO/IEC 14764:2006)
+    \end{enumerate}
+
+    \item План сопровождаемости (maintainability plan)
+    \begin{enumerate}
+        \item Документ, излагающий соответствующие методы обеспечения сопровождаемости, описывающий необходимые для этого ресурсы и работы применительно к программным средствам.
+        (ГОСТ Р ИСО/МЭК 14764--2002)
+        \item the scope of software maintenance, the designation of who will provide maintenance, an estimate of maintenance costs.
+        Documented in the maintenance plan.
+        (ISO/IEC 14764:2006)
+    \end{enumerate}
+
+    \item План сопровождения (maintenance plan)
+    \begin{enumerate}
+        \item Документ, излагающий соответствующие методы сопровождения, описывающий необходимые ресурсы и работы применительно к сопровождению программного продукта.
+        (ГОСТ Р ИСО/МЭК 14764--2002)
+        \item activities and tasks which should be performed and used while product maintenance
+        (ISO/IEC 14764:2006)
+    \end{enumerate}
+
+    \item Программа сопровождения (maintenance program)
+    \begin{enumerate}
+        \item Организационная структура, обязанности, процедуры, процессы и ресурсы, используемые при выполнении плана сопровождения.
+        (ГОСТ Р ИСО/МЭК 14764--2002)
+%        TODO
+    \end{enumerate}
+
+    \item Среда программной инженерии (СПИ)
+    \begin{enumerate}
+        \item Набор автоматических инструментальных средств, программно-аппаратных и технических средств, необходимых для выполнения объема работ по программной инженерии.
+        (ГОСТ Р ИСО/МЭК 14764--2002)
+%        TODO
+    \end{enumerate}
+
+    \item Среда тестирования программного средства (СТПС)
+    \begin{enumerate}
+        \item Вспомогательное оборудование, технические и программные средства, программы, реализованные техническими средствами, процедуры и документы, необходимые для проведения квалификационных, а возможно, и других испытаний (тестирований) программного средства.
+        (ГОСТ Р ИСО/МЭК 14764--2002)
+%        TODO
+    \end{enumerate}
+
+    \item Передача программного средства (software transition)
+    \begin{enumerate}
+        \item Контролируемая и координируемая последовательность действий, в процессе реализации которой разработанное программное средство передают из организации-разработчика в организацию, выполняющую его сопровождение.
+        (ГОСТ Р ИСО/МЭК 14764--2002)
+        \item a controlled and coordinated sequence of actions wherein software development passes from the organization performing initial software development to the organization performing software maintenance
+        (ISO/IEC 14764:2006)
+    \end{enumerate}
+\end{enumerate}

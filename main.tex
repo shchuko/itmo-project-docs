@@ -1,0 +1,54 @@
+% ОБЯЗАТЕЛЬНО ИМЕННО ТАКОЙ documentclass!
+% (Основной кегль = 14pt, поэтому необходим extsizes)
+% Формат, разумеется, А4
+% article потому что стандарт не подразумевает разделов
+% Глава = section, Параграф = subsection
+% (понятия "глава" и "параграф" из документа, описывающего диплом)
+\documentclass[a4paper,article,14pt]{extarticle}
+
+% Подключаем главный пакет со всем необходимым
+\usepackage{styles}
+
+% Пакеты по желанию (самые распространенные)
+% Хитрые мат. символы
+\usepackage{euscript}
+% Таблицы
+\usepackage{longtable}
+\usepackage{makecell}
+% Картинки (можно встявлять даже pdf)
+\usepackage[pdftex]{graphicx}
+
+\usepackage{amsthm,amssymb, amsmath}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{csquotes}
+
+
+\begin{document}
+
+% Титульник
+    \input{subs/titlepage.tex}
+
+% Реферат
+    \input{subs/essay.tex}
+
+% Содержание
+    \pagebreak
+    \tableofcontents
+
+% Введение
+    \input{subs/intro.tex}
+
+% Основная часть
+    \input{subs/section_1.tex}
+    \input{subs/section_2.tex}
+    \input{subs/section_3.tex}
+    \input{subs/section_4.tex}
+    \input{subs/section_5.tex}
+    \input{subs/section_6.tex}
+
+% Заключение
+    \input{subs/conclusion.tex}
+% Ссыки на источники
+    \input{subs/bibliography.tex}
+\end{document}
