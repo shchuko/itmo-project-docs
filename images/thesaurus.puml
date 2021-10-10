@@ -1,0 +1,44 @@
+@startuml
+rectangle "Сопровождение" as Maintenance #yellow
+rectangle "Процесс сопровождения" as MaintenanceProcess #yellow
+rectangle "Сопровождаемость" as Maintainability #yellow
+
+rectangle "Адаптивное сопровождение" as AdaptiveMaintenance
+rectangle "Корректирующее сопровождение" as CorrectiveMaintenance
+rectangle "Полное сопровождение" as PerfectiveMaintenance
+rectangle "Профилактическое сопровождение" as PreventiveMaintenance
+
+rectangle "Отчет о проблеме" as ProblemReport
+rectangle "Предложение о модификации" as ModificationRequest
+
+rectangle "План сопровождаемости" as MaintainabilityPlan
+rectangle "План сопровождения" as MaintenancePlan
+rectangle "Программа сопровождения" as MaintenanceProgram
+rectangle "Среда программной инженерии" as SEE
+rectangle "Среда тестирования программного средства" as STE
+rectangle "Передача программного средства" as SoftwareTransition
+
+Maintainability -UP- Maintenance: а
+Maintenance -- MaintenanceProcess: а
+AdaptiveMaintenance --> Maintenance: в
+CorrectiveMaintenance --> Maintenance: в
+PerfectiveMaintenance --> Maintenance: в
+PreventiveMaintenance --> Maintenance: в
+
+ProblemReport -LEFT- ModificationRequest: а
+ModificationRequest -- CorrectiveMaintenance: а
+ModificationRequest -- AdaptiveMaintenance: а
+ModificationRequest -- PerfectiveMaintenance: а
+ModificationRequest -- PreventiveMaintenance: а
+
+Maintainability -- MaintainabilityPlan: а
+
+MaintenancePlan -UP- MaintenanceProgram: а
+MaintenancePlan -UP- MaintenanceProcess: а
+MaintenanceProgram -UP- MaintenanceProcess: а
+
+MaintenancePlan -RIGHT- SEE: а
+MaintenancePlan -RIGHT- STE: а
+
+SoftwareTransition -UP- MaintenancePlan: а
+@enduml
