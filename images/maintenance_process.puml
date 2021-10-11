@@ -1,0 +1,23 @@
+@startuml
+
+rectangle "Сфомитрован запрос об изменении" as Report
+rectangle "Сфомитрована модификация" as ModificationRequest
+rectangle "Модификация проанализирован" as ModificationAnalysis
+rectangle "Модификация принята" as ModificationAccepted
+rectangle "Модификация не принята" as ModificationReject
+rectangle "Модификация требует исправлений" as ModificationToBeImproved
+
+
+Report .DOWN.> ModificationRequest
+ModificationRequest -DOWN-> ModificationAnalysis
+ModificationAnalysis -DOWN-> ModificationAccepted
+ModificationAnalysis -DOWN-> ModificationReject
+ModificationAnalysis -LEFT-> ModificationToBeImproved
+ModificationToBeImproved -> ModificationRequest
+
+note left of Report #green: "Запрос об улучшении"
+note right of Report #red: "Отчет об ошибке"
+note right of ModificationRequest #yellow: "Запрос изменений"
+
+note right of ModificationAnalysis #brown: "Отчет об анализе модификации"
+@enduml
