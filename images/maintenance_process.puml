@@ -17,7 +17,7 @@ ModificationToBeImproved -> ModificationRequest
 
 note left of Report #green: "Запрос об улучшении"
 note right of Report #red: "Отчет об ошибке"
-note right of ModificationRequest #yellow: "Запрос изменений"
+note right of ModificationRequest #yellow: "Описание модификации"
 
 note right of ModificationAnalysis #brown: "Отчет об анализе модификации"
 @enduml
