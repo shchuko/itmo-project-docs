@@ -1,23 +1,27 @@
 @startuml
 
-rectangle "Сфомитрован запрос об изменении" as Report
-rectangle "Сфомитрована модификация" as ModificationRequest
-rectangle "Модификация проанализирован" as ModificationAnalysis
+rectangle "Сфомитрован запрос об изменении" as ReportCreated
+rectangle "Запрос об изменении согласован" as ReportAccepted
+rectangle "Запрос об изменении не принят" as ReportRejected
+rectangle "Сфомитрована модификация" as ModificationRequestCreated
+rectangle "Модификация проанализирована" as ModificationAnalysisDone
 rectangle "Модификация принята" as ModificationAccepted
-rectangle "Модификация не принята" as ModificationReject
-rectangle "Модификация требует исправлений" as ModificationToBeImproved
+rectangle "Модификация не принята" as ModificationRejected
+rectangle "Модификация требует исправлений" as ModificationMustBeImproved
 
 
-Report .DOWN.> ModificationRequest
-ModificationRequest -DOWN-> ModificationAnalysis
-ModificationAnalysis -DOWN-> ModificationAccepted
-ModificationAnalysis -DOWN-> ModificationReject
-ModificationAnalysis -LEFT-> ModificationToBeImproved
-ModificationToBeImproved -> ModificationRequest
+ReportCreated --> ReportRejected
+ReportCreated --> ReportAccepted
+ReportAccepted .DOWN.> ModificationRequestCreated
+ModificationRequestCreated -DOWN-> ModificationAnalysisDone
+ModificationAnalysisDone -DOWN-> ModificationAccepted
+ModificationAnalysisDone -DOWN-> ModificationRejected
+ModificationAnalysisDone -LEFT-> ModificationMustBeImproved
+ModificationMustBeImproved -> ModificationRequestCreated
 
-note left of Report #green: "Запрос об улучшении"
-note right of Report #red: "Отчет об ошибке"
-note right of ModificationRequest #yellow: "Описание модификации"
+note left of ReportCreated #green: "Запрос об улучшении"
+note right of ReportCreated #red: "Отчет об ошибке"
+note right of ModificationRequestCreated #yellow: "Описание модификации"
 
-note right of ModificationAnalysis #brown: "Отчет об анализе модификации"
+note right of ModificationAnalysisDone #brown: "Отчет об анализе модификации"
 @enduml
