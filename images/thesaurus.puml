@@ -40,5 +40,6 @@ MaintenanceProgram -UP- MaintenanceProcess: а
 MaintenancePlan -RIGHT- SEE: а
 MaintenancePlan -RIGHT- STE: а
 
+MaintenanceProgram - MaintainabilityPlan: a
 SoftwareTransition -UP- MaintenancePlan: а
 @enduml

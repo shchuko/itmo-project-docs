@@ -1,0 +1,31 @@
+%! Author = vladislav.yaroshchuk
+%! Date = 11/10/2021
+
+\pagebreak
+\begin{center}
+    \specialsection{Приложение 1}
+\end{center}
+
+Пример Markdown-шаблона Запроса об улучшении:
+
+\begin{lstlisting}[label={lst:featurerequest}]
+#13: Some short feature request description here
+
+## Goal
+The final result you want to achieve. Avoid design specifics.
+
+
+## Technical details
+Some technical details, design specifics, suggestions, versions, etc.
+
+
+## Additional information
+Patch or branch references, any other useful information
+
+<!--
+The line below ensures that proper tags are added to the issue.
+Please do not remove it.
+-->
+/label ~"kind::Feature Request"
+
+\end{lstlisting}
